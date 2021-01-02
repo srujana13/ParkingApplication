@@ -1,3 +1,11 @@
+This project has been transfered from an enterprise github therefore has missing commits. 
+
+Team members involved: 
+
+Ayush Khot
+Rajshree Jain
+Srujana Rachakonda 
+
 # parking-app-dbms
 
 ### PREREQ:
