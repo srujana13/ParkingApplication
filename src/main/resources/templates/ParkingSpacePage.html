@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Include _menu.html -->
+<th:block th:include="_menu"></th:block>
+<div align="center">
+    <h1>Parking Space Record</h1>
+    <a href="/admin/AssignTypeToSpace/new">Assign Type To Space</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Space_No</th>
+            <th>parking_lot_name</th>
+            <th>space_type</th>
+            <th>zone</th>
+            <th>Occupied</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="parkingspace : ${parkingspace}">
+            <td th:text="${parkingspace.space_no}">Space_No</td>
+            <td th:text="${parkingspace.parking_lot_name}"> parking_lot_name</td>
+            <td th:text="${parkingspace.space_type}">space_type</td>
+            <td th:text="${parkingspace.zone}"></td>
+            <td th:text="${parkingspace.occupied}"></td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Visitor Permit!</title>
+
+</head>
+<body>
+
+<h2>New Visitor Permit</h2>
+
+<form action="#" th:action="@{/visitor/getVisitorPermit/add}" th:object="${visitorPermit}" method="post">
+
+    <p>Lot Name: <input type="text" th:field="*{lot_name}" /></p>
+    <p>Duration: <input type="text" th:field="*{duration}" /></p>
+    <p>License Plate Number: <input type="text" th:field="*{license_plate_no}" /></p>
+    <p>Time beginning: <input type="datetime-local" th:field="*{startTime}" /></p>
+    <label for="type">Type:</label>
+    <select name="Type" id="type" th:field="*{space_type}">
+        <option value="Regular">Regular</option>
+        <option value="Electric">Electric</option>
+        <option value="Handicapped">Handicapped</option>
+    </select>
+    <p>Contact Number: <input type="text" th:field="*{contact_no}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</body>
+</html>

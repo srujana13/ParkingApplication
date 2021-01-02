@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:utext="${title}"></title>
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="_menu"></th:block>
+
+<h2>Admin Page</h2>
+<h3>Welcome :
+    <span th:utext="${#request.userPrincipal.name}"></span>
+</h3>
+<b>This is protected page!</b>
+
+<br/><br/>
+
+<div th:if="${userInfo != null}" th:utext="${userInfo}"></div>
+<br><br><br><br>
+<a th:href="@{/admin/citations}">Citations</a>
+<br><br>
+<a th:href="@{/admin/addLot}">Add Lot</a>
+<br>
+<a th:href="@{/admin/addZonetoLot}">AssignZoneToLot</a>
+<br>
+<a th:href="@{/admin/AssignTypeToSpace}">AssignTypeToSpace</a>
+<br>
+<a th:href="@{/admin/AssignPermit}">AssignPermit</a>
+<br>
+<a th:href="@{/admin/CheckVVParking}">CheckVValidParking</a>
+<br>
+<a th:href="@{/admin/CheckNVParking}">CheckNVValidParking</a>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.springframework.org/tags/form">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Include _menu.html -->
+
+<h2>New Citation</h2>
+
+<form action="#" th:action="@{/admin/citations/add}" th:object="${citation}" method="post">
+
+    <p>License Number: <input type="text" th:field="*{licenseNumber}" /></p>
+    <p>Model: <input type="text" th:field="*{model}" /></p>
+    <p>Color: <input type="text" th:field="*{color}" /></p>
+    <p>Date: <input type="datetime-local" th:field="*{cDate_String}" /></p>
+    <p>Lot: <input type="text" th:field="*{lot}" /></p>
+    <p>ViolationId: <input type="number" min="1" max="3" th:field="*{violationId}" /> <p>● 1 : Invalid Permit ($20)
+    ● 2 : Expired Permit ($25)
+    ● 3 : No Permit ($40)</p></p>
+
+
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
+</body>
+</html>

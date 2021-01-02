@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Include _menu.html -->
+<th:block th:include="_menu"></th:block>
+<div align="center">
+    <h1>Zone Designation Record</h1>
+    <a href="/admin/addZonetoLot/new">Add zone to lot</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>zone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="zonedesignation : ${zonedesignation}">
+            <td th:text="${zonedesignation.lot_name}">name</td>
+            <td th:text="${zonedesignation.zone}"> zone</td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>

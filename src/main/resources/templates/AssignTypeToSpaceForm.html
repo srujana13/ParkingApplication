@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.springframework.org/tags/form">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Include _menu.html -->
+
+<h2>Assign Type to Space</h2>
+
+<form action="#" th:action="@{/admin/AssignTypeToSpace/add}" th:object="${parkingspace}" method="post">
+    <p>Parking Lot Name: <input type="text" th:field="*{parking_lot_name}" /></p>
+    <p>Space No: <input type="number" th:field="*{space_no}" /></p>
+    <p>Space Type: <input type="text" th:field="*{space_type}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
+</body>
+</html>

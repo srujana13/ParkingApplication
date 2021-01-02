@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.springframework.org/tags/form">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Include _menu.html -->
+
+<h2>New Vehicle</h2>
+
+<form action="#" th:action="@{/registerVehicle/save}" th:object="${vehicle}" method="post">
+
+    <p>Manufacturer: <input type="text" th:field="*{manufacturer}" /></p>
+    <p>Model: <input type="text" th:field="*{model}" /></p>
+    <p>Color: <input type="text" th:field="*{color}" /></p>
+    <p>Year: <input type="text" th:field="*{year}" /></p>
+    <p>License Plate Number: <input type="text" th:field="*{license_plate_no}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Include _menu.html -->
+<th:block th:include="_menu"></th:block>
+<div align="center">
+    <h1>Permit Records</h1>
+    <a href="/admin/AssignPermit/new">Assign a Permit</a>
+    <br/><br/>
+    <div th:if="${visitorPermits} != null">
+    <h2>Visitor Permits</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>permit_id</th>
+            <th>license_plate_no</th>
+            <th>start_time</th>
+            <th>exp_time</th>
+            <th>duration</th>
+            <th>zone_id</th>
+            <th>space_type</th>
+            <th>space_no</th>
+            <th>lot_name</th>
+            <th>overage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="visitor_permits : ${visitorPermits}">
+            <td th:text="${visitor_permits.permit_id}">permit_id</td>
+            <td th:text="${visitor_permits.license_plate_no}">license_plate_no</td>
+            <td th:text="${visitor_permits.start_time}">start_time</td>
+            <td th:text="${visitor_permits.exp_time}">exp_time</td>
+            <td th:text="${visitor_permits.duration}">duration</td>
+            <td th:text="${visitor_permits.zone_id}">zone_id</td>
+            <td th:text="${visitor_permits.space_type}">space_type</td>
+            <td th:text="${visitor_permits.space_no}">space_no</td>
+            <td th:text="${visitor_permits.lot_name}">lot_name</td>
+            <td th:text="${visitor_permits.overage/(3600*1000) + 'hrs'}"></td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    </div>
+    <h2>Non Visitor Permits</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>permit_id</th>
+            <th>license_plate_no</th>
+            <th>start_time</th>
+            <th>exp_time</th>
+            <th>zone_id</th>
+            <th>space_type</th>
+            <th>univid</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="non_visitor_permits : ${nonVisitorPermits}">
+            <td th:text="${non_visitor_permits.permit_id}">permit_id</td>
+            <td th:text="${non_visitor_permits.license_plate_no}">license_plate_no</td>
+            <td th:text="${non_visitor_permits.start_time}">start_time</td>
+            <td th:text="${non_visitor_permits.exp_time}">exp_time</td>
+            <td th:text="${non_visitor_permits.zone_id}">zone_id</td>
+            <td th:text="${non_visitor_permits.space_type}">space_type</td>
+            <td th:text="${non_visitor_permits.univid}">univid</td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+

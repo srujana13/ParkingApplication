@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.springframework.org/tags/form">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Include _menu.html -->
+
+<h2>Check Permit Valid for Non-Visitor</h2>
+
+<form action="#" th:action="@{/admin/CheckVVParking/check}" method="post">
+
+    <p>Space #: <input type="text" th:name="space" /></p>
+    <p>Lot Name: <input type="text" th:name="lot" /></p>
+    <p>License#: <input type="text" th:name="license" /></p>
+
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
+</body>
+</html>
+

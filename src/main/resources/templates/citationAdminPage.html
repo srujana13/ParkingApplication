@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Include _menu.html -->
+<th:block th:include="_menu"></th:block>
+<div align="center">
+    <h1>Citation Records</h1>
+    <a href="/admin/citations/new">Issue New Citation</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>C_NO</th>
+            <th>License Number</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Lot</th>
+            <th>Issue Time</th>
+            <th>Violation Category</th>
+            <th>Fee</th>
+            <th>Due</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="citation : ${citations}">
+            <td th:text="${citation.cNo}">ID</td>
+            <td th:text="${citation.licenseNumber}">Item Name</td>
+            <td th:text="${citation.model}">Quantity</td>
+            <td th:text="${citation.color}">Amount</td>
+            <td th:text="${citation.lot}">Amount</td>
+            <td th:text="${citation.cDate}">Amount</td>
+            <td th:text="${citation.violationCategory}">Amount</td>
+            <td th:text="${citation.fee}">Amount</td>
+            <td th:text="${citation.due}">Amount</td>
+            <td th:text="${citation.status}">Amount</td>
+            <td>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>

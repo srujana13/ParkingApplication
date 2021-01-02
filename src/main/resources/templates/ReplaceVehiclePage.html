@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Replace Vehicle</title>
+
+</head>
+<body>
+<h2>Replace Vehicle</h2>
+
+<form th:action="@{/user/replaceVehicle/replace}" method="post">
+
+    <p>Permit Id: <input type="text" th:name="permit_id" /></p>
+    <p>Univ Id: <input type="text" th:name="univid" /></p>
+    <p>Old License Plate No: <input type="text" th:name="l_no_old" /></p>
+    <p>New License Plate No: <input type="text" th:name="l_no_new" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</body>
+</html>

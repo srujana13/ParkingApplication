@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Include _menu.html -->
+<th:block th:include="_menu"></th:block>
+<div align="center">
+    <h1>Parking Lot Record</h1>
+    <a href="/admin/addLot/new">Add parking Lot</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>address</th>
+            <th>space_count</th>
+            <th>zone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="parkinglots : ${parkinglots}">
+            <td th:text="${parkinglots.name}">name</td>
+            <td th:text="${parkinglots.address}"> address</td>
+            <td th:text="${parkinglots.space_count}">space_count</td>
+            <td th:text="${parkinglots.zone}">zone</td>
+            <!-- <td th:text="${parkinglots.visitor_space_count}">visitor_space_count</td> -->
+            <!-- <td th:text="${parkinglots.beginning_space_number}">beginning_space_number</td> -->
+            
+            <td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>

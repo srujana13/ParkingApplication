@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Vehicle</title>
+
+</head>
+<body>
+
+<h2>Add Vehicle</h2>
+
+<form action="#" th:action="@{/user/addVehicle/add}" th:object="${nonVisitorPermit}" method="post">
+
+    <p>Permit Id: <input type="text" th:field="*{permit_id}" /></p>
+    <p>Univ Id: <input type="text" th:field="*{univid}" /></p>
+    <p>License Plate No to Add: <input type="text" th:field="*{license_plate_no}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</body>
+</html>

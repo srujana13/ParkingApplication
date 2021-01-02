@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellpadding="10">
+    <thead>
+    <tr>
+        <th th:text="${col1}"/>
+        <th th:text="${col2}"/>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="output : ${outputs}">
+        <td th:text="${output.f1}">name</td>
+        <td th:text="${output.f2}"> address</td>
+
+        <td>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

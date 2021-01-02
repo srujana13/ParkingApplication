@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:utext="${title}"></title>
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="_menu"></th:block>
+
+<h2>Message : <span th:utext="${message}"></span></h2>
+
+<br/><br/>
+
+<a th:href="@{/sampleQueries/1}">1. Show the list of zones for each lot as tuple pairs (lot, zone)</a>
+<br><br>
+<p> 2. Get permit information for a given employee with UnivID</p>
+<form th:action="@{/sampleQueries/2}">
+    <input type="text" th:name="univid"/>
+    <input type="submit"/>
+</form>
+<br>
+<p> 3. Get vehicle information for a particular UnivID:</p>
+<form th:action="@{/sampleQueries/3}">
+    <input type="text" th:name="univid"/>
+    <input type="submit"/>
+</form>
+<br>
+<p> 4. Find an available space# for Visitor for an electric vehicle in a specific parking lot: Justice Lot</p>
+<form th:action="@{/sampleQueries/4}">
+    LotName:<input type="text" th:name="lotName"/>
+    SpaceType:<input type="text" th:name="type"/>
+
+    <input type="submit"/>
+</form>
+<br>
+<a th:href="@{/sampleQueries/5}">5. Find any cars that are currently in violation
+</a>
+<br>
+<p> 6. How many employees have permits for parking zone </p>
+<form th:action="@{/sampleQueries/6}">
+    <input type="text" th:name="zone"/>
+
+    <input type="submit"/>
+</form>
+<br><br>
+<h2>Reporting Queries</h2>
+<p> 1. For each lot, generate the total number of citations given in all zones in the lot for a three
+    month period (07/01/2020 - 09/30/2020). </p>
+<form th:action="@{/sampleQueries/7}">
+    <input type="date" th:name="from"/>
+    <input type="date" th:name="to"/>
+
+    <input type="submit"/>
+</form>
+<br>
+<p> 2. For Justice Lot, generate the number of visitor permits in a date range: 08/12/2020 -
+    08/20/2020, grouped by permit type e.g. regular, electric, handicapped. </p>
+<form th:action="@{/sampleQueries/8}">
+    <input type="text" th:name="lot"/>
+    <input type="date" th:name="from"/>
+    <input type="date" th:name="to"/>
+
+    <input type="submit"/>
+</form>
+<br>
+<p> 3. For each visitor’s parking zone, show the total amount of revenue generated (including
+    pending citation fines) for each day in August 2020. </p>
+<form th:action="@{/sampleQueries/9}">
+    <input type="month" th:name="startMonth"
+           min="2020-01" value="2020-10">
+
+
+    <input type="submit"/>
+</form>
+<br><br>
+
+
+
+
+
+</body>
+
+</html>
