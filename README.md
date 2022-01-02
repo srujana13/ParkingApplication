@@ -18,7 +18,7 @@ Ayush Khot
 Rajshree Jain  
 Srujana Rachakonda  
 
-## PREREQ:
+## Prerequisites:
 1. Maven - (for dependency management) in your system. (https://maven.apache.org/install.html)
 2. Java - Preferred JDK11
 
