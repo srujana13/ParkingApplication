@@ -1,3 +1,11 @@
+The goal of this project is for you to develop a database application to help University Parking
+Services (UPS) manage the campus parking lots and its users. The UPS issues parking permits
+to employees, students and visitors and there are different eligibility constraints for parking
+permits in the different lots as well as time restrictions for eligibility. In addition to the permits,
+UPS issues tickets/citations for parking violations and collects fees for them.
+
+The problem description can be found in CSC540_Project1.pdf file. 
+
 This project has been transfered from an enterprise github therefore has missing commits. 
 
 Team members involved: 
