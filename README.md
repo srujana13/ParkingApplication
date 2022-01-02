@@ -12,7 +12,7 @@ The problem description can be found in CSC540_Project1.pdf file.
 
 This project has been transfered from an enterprise github therefore has missing commits. 
 
-Team members involved: 
+### Team
 
 Ayush Khot  
 Rajshree Jain  
