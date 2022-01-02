@@ -1,3 +1,7 @@
+# Parking Lot Application 
+
+## Description 
+
 The goal of this project is for you to develop a database application to help University Parking
 Services (UPS) manage the campus parking lots and its users. The UPS issues parking permits
 to employees, students and visitors and there are different eligibility constraints for parking
@@ -14,7 +18,7 @@ Ayush Khot
 Rajshree Jain  
 Srujana Rachakonda  
 
-# parking-app-dbms
+
 
 ### PREREQ:
 1. Maven - (for dependency management) in your system. (https://maven.apache.org/install.html)
